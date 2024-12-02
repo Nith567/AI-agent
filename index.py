@@ -13,12 +13,10 @@ CORS(app)
 
 # Setup SQLite tables
 setup()
-
-
 agent_executor = initialize_agent()
 app.agent_executor = agent_executor
 
-# Interact with the agent
+# Interact with the agent with dao contribute
 @app.route("/api/DAOcontribute", methods=['POST'])
 def DAOcontribute():
     try:
